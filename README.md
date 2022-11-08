@@ -8,4 +8,4 @@
 - Programador: [Daniel Henrique Serezane Pereira](https://github.com/salies)
 
 ### Documentação:
-- [Requirements](https://github.com/Team-Dire/university-restaurant/blob/main/docs/REQUIREMENTS.md)
+- [Documento de Requisitos](https://github.com/Team-Dire/university-restaurant/blob/main/docs/REQUIREMENTS.md)
