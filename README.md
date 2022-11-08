@@ -7,5 +7,5 @@
 - Testador: [Guilherme Eduardo Silva Batalhoti](https://github.com/GuiBatalhoti)
 - Programador: [Daniel Henrique Serezane Pereira](https://github.com/salies)
 
-### Docs:
+### Documentação:
 - [Requirements](https://github.com/Team-Dire/university-restaurant/blob/main/docs/REQUIREMENTS.md)
