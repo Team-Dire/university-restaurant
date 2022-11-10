@@ -10,7 +10,7 @@
 
 ### Manutenção de usuários
 
-- R1.1 — O sistema deve ser capaz de distinguir usuários em duas categorias: cliente e administrador.
+- R1.1 — O sistema deve ser capaz de distinguir usuários (clientes) em duas categorias: administrador e não-administrador.
 - R1.2 — O sistema deve permitir a autenticação de um usuário por um CPF e senha.
 
 ### Informar refeições
