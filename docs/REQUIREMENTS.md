@@ -43,3 +43,4 @@
 - R5.3 — O software deve apenas conceder a entrada no restaurante para clientes com tíquete.
 - R5.4 — O software não deve conceder a entrada no restaurante para clientes sem tíquete.
 - R5.5 — O software deve ser capaz de conceder a entrada de clientes no restaurante apenas na data e período (derivado do tipo de refeição) de serventia.
+- R5.6 — O software deve permitir a entrada de um cliente apenas uma vez para uma refeição servida.
