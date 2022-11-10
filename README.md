@@ -9,3 +9,4 @@
 
 ### Documentação:
 - [Documento de Requisitos](https://github.com/Team-Dire/university-restaurant/blob/main/docs/REQUIREMENTS.md)
+- [Casos de Uso](https://github.com/Team-Dire/university-restaurant/blob/main/docs/USE_CASES.md)
