@@ -1,5 +1,11 @@
 # Seja bem-vindo ao Sistema de Restaurante Universitário!
 
+### Documentação:
+- [📜 Regras de trabalho](https://github.com/Team-Dire/university-restaurant/blob/main/docs/WORKFLOW_RULES.md)
+- [🗎 Documento de Requisitos](https://github.com/Team-Dire/university-restaurant/blob/main/docs/REQUIREMENTS.md)
+- [🗎 Casos de Uso](https://github.com/Team-Dire/university-restaurant/blob/main/docs/USE_CASES.md)
+
+
 ### Papéis de cada contribuidor:
 - Gerente: [Gustavo Becelli do Nacimento](https://github.com/becelli)
 - Analista: [Gabriel Oya Nozawa](https://github.com/G-Nozawa)
@@ -7,6 +13,3 @@
 - Testador: [Guilherme Eduardo Silva Batalhoti](https://github.com/GuiBatalhoti)
 - Programador: [Daniel Henrique Serezane Pereira](https://github.com/salies)
 
-### Documentação:
-- [Documento de Requisitos](https://github.com/Team-Dire/university-restaurant/blob/main/docs/REQUIREMENTS.md)
-- [Casos de Uso](https://github.com/Team-Dire/university-restaurant/blob/main/docs/USE_CASES.md)
