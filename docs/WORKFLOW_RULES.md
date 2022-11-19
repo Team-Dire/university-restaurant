@@ -1,7 +1,7 @@
 Para melhor organização do projeto a ser desenvolvido, todos devem seguir as seguintes regras:
 
 Fluxo de trabalho:
-Analista -> Projetista **→** SQA/Testador **→** Programador **→** SQA/Testador **→** Gerente
+Analista **→** SQA/Testador **→** Projetista **→** SQA/Testador **→** Programador **→** SQA/Testador **→** Gerente
 
 - Ao começar a trabalhar em uma issue, deve-se alterar o **status** para **🏗 Em progresso**.
 - Ao finalizar o trabalho, desassocie-se como responsável e associe o próximo. Ademais, altere o status da issue para **🆕 Pendente**.
