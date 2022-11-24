@@ -3,7 +3,7 @@
 ## Documento de Requisitos
 
 - R1.1 --> Armazerna-se dados dos usuários, não sobre eles. Dos tipos de usuário, não faz sentido ser um atributo, o ideial seria existir dois tipos classe usuário diferentes, um apenas executa mais funç~eos que oturo.
-- R1.3 --> Aqui é o CPF do usuário e não "um", dá a entender q é um qualquer. Além disso, somente um usuário pode ter tal CPF?
+- R1.3 --> Aqui deveria estar escrito como "o CPF do usuário" e não "um", dá a entender que é um qualquer. Além disso, somente um usuário pode ter tal CPF?
 
 
 ## Casos de Uso
