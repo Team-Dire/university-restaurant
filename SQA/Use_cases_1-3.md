@@ -27,4 +27,6 @@ Alguns erros simples de digitação, já foram corrigidos.
 
 |Defeito | Tipo | Descrição|
 |--------|------|----------|
-|01      |IE    ||
+|01      |O     |Evento 2: Falta informações dos atributos da refeição.|
+|02      |FI    |Evento 5: não faz sentido ser um evento o administrado continuar utiliziando o software.|
+|03      |IE    |Evento 4: o sistema informar sobre a nova refeição, seria uma notificação a todos os usuários do sistema?|
