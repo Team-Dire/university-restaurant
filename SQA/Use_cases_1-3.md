@@ -1,4 +1,5 @@
 # Análise
+Início 23/11/2022 - Fim 24/11/2022
 
 ## Documento de Requisitos
 
