@@ -11,20 +11,22 @@
 **Referências cruzadas:** R.1.2, R.1.3.
 
 **Sequência típica:**
-1. Iniciado quando o usuário inicializa o software
-2. O usuário insere o seu CPF e a sua senha
-3. O software busca usuário com o mesmo CPF e senha informados.
-4. O software libera somente as operações reservadas ao tipo de usuário encontrado (administrador ou usuário não administrador).
-5. O usuário continua a utilizar o software.
+| Ator | Sistema | 
+|--------|------|
+|1. Iniciado quando o usuário inicializa o software| |
+|2. O usuário insere o seu CPF e a sua senha|3. O software busca usuário com o mesmo CPF e senha informados.|
+| |4. O software libera somente as operações reservadas ao tipo de usuário encontrado (administrador ou usuário não administrador).|
+|5. O usuário recebe a autorização para utilizar as funções do software.| |
 
-**Sequência alternativa:**: Linha 3: O login e senha informados não foram encontrados. O software deve exibir uma mensagem de erro informando que os dados inseridos estão incorretos e impedir o acesso as outras funcionalidades do software, até que o usuário seja autenticado.
+**Sequência alternativa:**: Linha 3: O CPF informado não foi encontrado. O software deve exibir uma mensagem de erro informando que os usuário não existe e impedir o acesso as outras funcionalidades do software, até que o usuário seja autenticado.
+**Sequência alternativa:**: Linha 3: A senha informada não corresponde a senha associado ao CPF cadastrado. O software deve exibir uma mensagem de erro informando que a senha inserida está incorretos e impedir o acesso as outras funcionalidades do software, até que o usuário seja autenticado.
 
 
 # Caso de uso: Adicionar um novo usuário não administrador.
 
 **Ator:** Usuário não administrador (iniciador).
 
-**Finalidade:** Permitir que o usuário possa ser autenticado e utilizar o software.
+**Finalidade:** Permitir que o usuário crie uma conta no sistema e insira seus dados.
 
 **Tipo:** Secundário, essencial.
 
@@ -33,12 +35,12 @@
 **Referências cruzadas:** R.1.1
 
 **Sequência típica:**:
-1. Iniciado quando o usuário deseja adicionar uma conta no software.
-2. O usuário insere o seu CPF e senha para cadastro.
-3. O software verifica se um usuário com o mesmo CPF existe.
-4. O software cria um novo usuário com CPF e senha informados, com o saldo de créditos zerados.
-5. O software libera somente as operações reservadas ao tipo de usuário comum.
-6. O usuário continua a utilizar o software.
+| Ator | Sistema | 
+|--------|------|
+|1. Iniciado quando o usuário deseja adicionar uma conta no software.| |
+|2. O usuário insere o seu CPF e senha para cadastro.|3. O software verifica se um usuário com o mesmo CPF existe.|4. O software cria um novo usuário com CPF e senha informados, com o saldo de créditos zerados.|
+| |5. O software libera somente as operações reservadas ao tipo de usuário comum.|
+|6. O usuário recebe a autorização para utilizar as funções do software.| |
 
 **Sequência alternativa:**: Linha 3: O CPF informado já está no sistema. O software deve exibir uma mensagem de erro informando que o CPF já foi cadastrado e deve impedir o acesso as outras funcionalidades do software, até que o usuário seja autenticado ou cadastrado.
 
@@ -56,8 +58,9 @@
 **Referências cruzadas:**: R.2.1, R.2.2
 
 **Sequência típica:**
-1. Iniciado quando um administrador precisa inserir a refeição de uma determinada data.
-2. O administrador autenticado acessa a função de nova refeição e informa os dados da refeição (data de serviço, tipo, número de tíquetes disponíveis, ).
-3. O software registra os dados da refeição e torna disponível a venda de tíquetes para a nova refeição.
-4. O software informa que a nova refeição foi criada.
-5. O administrador continua a utilizar o sofware.
+| Ator | Sistema | 
+|--------|------|
+|1. Iniciado quando um administrador precisa inserir a refeição de uma determinada data.| |
+|2. O administrador autenticado acessa a função de nova refeição e informa os dados da refeição (data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimentos de base, guarnição, saladas, bebida e sobremesa).| |
+| |3. O software registra os dados da refeição e torna disponível a venda de tíquetes para a nova refeição.|
+| |4. O software informa ao administrador de que a nova refeição foi criada.|
