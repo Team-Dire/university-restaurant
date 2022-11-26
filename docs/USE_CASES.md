@@ -15,8 +15,8 @@
 |--------|------|
 |1. Iniciado quando o usuário inicializa o software| |
 |2. O usuário insere o seu CPF e a sua senha|3. O software busca usuário com o mesmo CPF e senha informados.|
-| |4. O software libera somente as operações reservadas ao tipo de usuário encontrado (administrador ou usuário não administrador).|
-|5. O usuário recebe a autorização para utilizar as funções do software.| |
+| |3. O software libera somente as operações reservadas ao tipo de usuário encontrado (administrador ou usuário não administrador).|
+|4. O usuário recebe a autorização para utilizar as funções do software.| |
 
 **Sequência alternativa:**: Linha 3: O CPF informado não foi encontrado. O software deve exibir uma mensagem de erro informando que os usuário não existe e impedir o acesso as outras funcionalidades do software, até que o usuário seja autenticado.
 **Sequência alternativa:**: Linha 3: A senha informada não corresponde a senha associado ao CPF cadastrado. O software deve exibir uma mensagem de erro informando que a senha inserida está incorretos e impedir o acesso as outras funcionalidades do software, até que o usuário seja autenticado.
@@ -39,8 +39,8 @@
 |--------|------|
 |1. Iniciado quando o usuário deseja adicionar uma conta no software.| |
 |2. O usuário insere o seu CPF e senha para cadastro.|3. O software verifica se um usuário com o mesmo CPF existe.|4. O software cria um novo usuário com CPF e senha informados, com o saldo de créditos zerados.|
-| |5. O software libera somente as operações reservadas ao tipo de usuário comum.|
-|6. O usuário recebe a autorização para utilizar as funções do software.| |
+| |3. O software libera somente as operações reservadas ao tipo de usuário comum.|
+|4. O usuário recebe a autorização para utilizar as funções do software.| |
 
 **Sequência alternativa:**: Linha 3: O CPF informado já está no sistema. O software deve exibir uma mensagem de erro informando que o CPF já foi cadastrado e deve impedir o acesso as outras funcionalidades do software, até que o usuário seja autenticado ou cadastrado.
 
