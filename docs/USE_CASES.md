@@ -63,3 +63,23 @@
 |1. Iniciado quando um administrador precisa inserir a refeição de uma determinada data.| |
 |2. O administrador autenticado acessa a função de nova refeição e informa os dados da refeição (data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimentos de base, guarnição, saladas, bebida e sobremesa).|3. O software registra os dados da refeição e torna disponível a venda de tíquetes para a nova refeição.|
 | |4. O software informa ao administrador de que a nova refeição foi criada.|
+
+
+# Caso de uso: Exibir refeições da semana.
+
+**Ator:** usuário (iniciador).
+
+**Finalidade:** Permitir que o usuário visualize as refeições da semana.
+
+**Tipo:** Primário, essencial.
+
+**Descrição:** Um usuário deseja visualizar as refeições da semana atual ou semana seguinte. Assim, o usuário irá requisitar ao software a exibição das refeições da semana atual e seguinte.
+
+**Referências cruzadas:**: R.2.3, R.2.4
+
+**Sequência típica:**
+| Ator | Sistema | 
+|--------|------|
+|1. Iniciado quando um usuário deseja visualizar as próximas refeições.| |
+|2. O usuário requisita ao software a exibição das próximas refeições.|3. O software exibe o nome de todas as refeições existentes na semana atual e na semana seguinte e também exibe todos os dados correspondente a cada refeição exibida, i.e., data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimentos de base, guarnição, saladas, bebida e sobremesa. |
+|4. O usuário visualiza as próximas refeições. | |
