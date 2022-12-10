@@ -63,3 +63,25 @@
 |1. Iniciado quando um administrador precisa inserir a refeição de uma determinada data.| |
 |2. O administrador autenticado acessa a função de nova refeição e informa os dados da refeição (data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimentos de base, guarnição, saladas, bebida e sobremesa).|3. O software registra os dados da refeição e torna disponível a venda de tíquetes para a nova refeição.|
 | |4. O software informa ao administrador de que a nova refeição foi criada.|
+
+# Caso de uso: Entrada de clientes.
+
+**Ator:** Usuário (iniciador).
+
+**Finalidade:** Permitir que os usuários entrem no restaurante universitário.
+
+**Tipo:** Primário, essencial.
+
+**Descrição:** Um usuário deseja entrar no restaurante universitário a fim de fazer sua refeição. Desse modo, o usuário que possua um tíquete para a refeição do dia deve utilizar o software e requisitar o destravamento da catraca.
+
+**Referências cruzadas:**
+
+**Sequência típica:**
+| Ator | Sistema | 
+|--------|------|
+|1. Iniciado quando um usuário deseja entrar no restaurante.| |
+|2. O usuário requisita a liberação da catraca pelo software.|3. O software verifica se o usuário possui um tíquete para a refeição do dia.|
+| |4. O software destrava a catraca.|
+|5. O usuário passa pela catraca. |6. A catraca é travada.|
+
+**Sequência alternativa:**: Linha 3: O usuário não possui um tíquete para a refeição do dia. O software não destranca a catraca e o usuário não poderá entrar no restaurante universitário.
