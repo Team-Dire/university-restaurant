@@ -63,3 +63,25 @@
 |1. Iniciado quando um administrador precisa inserir a refeição de uma determinada data.| |
 |2. O administrador autenticado acessa a função de nova refeição e informa os dados da refeição (data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimentos de base, guarnição, saladas, bebida e sobremesa).|3. O software registra os dados da refeição e torna disponível a venda de tíquetes para a nova refeição.|
 | |4. O software informa ao administrador de que a nova refeição foi criada.|
+
+
+# Caso de uso: Inserir créditos a um usuário.
+
+**Ator:**: Administrador (iniciador), usuário.
+
+**Finalidade:**: Permitir que o administrador insira créditos a um usuário específico.
+
+**Tipo:** Primário, essencial.
+
+**Descrição:**: Um usuário deseja inserir créditos em sua conta. Assim, o usuário deverá pagar um administrador a quantia em dinheiro correspondente ao valor em créditos no qual o usuário deseja inserir em sua conta. Em seguida, o administrador deverá inserir a quantia de créditos correspondente na conta do usuário.
+
+**Referências cruzadas:**: R.3.1, R.3.2
+
+**Sequência típica:**
+| Ator | Sistema | 
+|--------|------|
+|1. Iniciado quando um administrador precisa adicionar créditos a um usuário.| |
+|2. O administrador autenticado insere o CPF do usuário e o valor em reais da quantia de créditos no qual deve ser inserida.|3. O sistema busca o usuário pelo CPF informado e adiciona a quantidade de créditos informado no saldo do usuário.|
+| |4. O sistema armazena a data de inserção, quantidade de créditos inserida, usuário beneficiado e o administrador da transação em um arquivo de log.|
+
+**Sequência alternativa:**: Linha 3: O usuário com o CPF informado não está no sistema. O software deve exibir uma mensagem de erro informando que usuário não existe e deve cancelar a inserção de créditos.
