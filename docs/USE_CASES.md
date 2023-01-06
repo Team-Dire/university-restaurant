@@ -64,6 +64,30 @@
 |2. O administrador autenticado acessa a função de nova refeição e informa os dados da refeição (data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimentos de base, guarnição, saladas, bebida e sobremesa).|3. O software registra os dados da refeição e torna disponível a venda de tíquetes para a nova refeição.|
 | |4. O software informa ao administrador de que a nova refeição foi criada.|
 
+
+# Caso de uso: Comprar tíquetes da refeição.
+
+**Ator:** Usuário (iniciador).
+
+**Finalidade:** Permitir que o usuário adquira uma refeição de uma data específica.
+
+**Tipo:** Primário, essencial.
+
+**Descrição:** Um usuário deseja adquirir uma refeição de um dia específico. Desse modo, o usuário deverá comprar um tíquete da refeição no qual ele deseja, utilizando os créditos de sua conta.
+
+**Referências cruzadas:** R.4.1, R.4.2, R.4.3, R.4.4, R.4.5, R.4.6, R.4.7, R.4.8.
+
+**Sequência típica:**
+| Ator | Sistema | 
+|--------|------|
+|1. Iniciado quando um usuário deseja adquirir a refeição de uma determinada data.| |
+|2. O usuário autenticado acessa a função de compra de tíquetes e informa o nome e a data da refeição na qual ele deseja adquirir.|3. O software busca a refeição com o dia e nome informados, verifica se o usuário possui créditos suficientes para comprar o tíquete, se ainda há tíquetes disponíveis para aquela refeição e se o usuário não possui um tíquete para a aquela mesma refeição.|
+| |4. O software associa o tíquete ao usuário, desconta o valor do tíquete do saldo do usuário e reduz o número de tíquetes disponíveis em 1 unidade.|
+
+**Sequência alternativa:** Linha 3: O usuário não possui créditos suficientes para comprar o tíquete da refeição. O software deve cancelar a compra e exibir uma mensagem de erro informando que o usuário não possui créditos suficientes para realizar a compra.
+**Sequência alternativa:** Linha 3: A refeição não possui tíquetes disponíveis. O software deve deve cancelar a compra e exibir uma mensagem de erro informando que todos os tíquetes da refeição foram comprados.
+**Sequência alternativa:** Linha 3: O usuário já possui um tíquete para a refeição informada. O software deve cancelar a compra e exibir uma mensagem de erro informando que o usuário não pode comprar mais do que 1 tíquete para a mesma refeição.
+
 # Caso de uso: Entrada de clientes.
 
 **Ator:** Usuário (iniciador).
@@ -74,14 +98,15 @@
 
 **Descrição:** Um usuário deseja entrar no restaurante universitário a fim de fazer sua refeição. Desse modo, o usuário que possua um tíquete para a refeição do dia deve utilizar o software e requisitar o destravamento da catraca.
 
-**Referências cruzadas:**
+**Referências cruzadas:** R.5.1, R.5.2, R.5.3, R.5.4, R.5.5, R.5.6.
 
 **Sequência típica:**
 | Ator | Sistema | 
 |--------|------|
 |1. Iniciado quando um usuário deseja entrar no restaurante.| |
-|2. O usuário requisita a liberação da catraca pelo software.|3. O software verifica se o usuário possui um tíquete para a refeição do dia.|
+|2. O usuário insere seu CPF na catraca.|3. O software busca o usuário com o mesmo CPF informado e verifica se o usuário possui um tíquete para a refeição do dia.|
 | |4. O software destrava a catraca.|
 |5. O usuário passa pela catraca. |6. A catraca é travada.|
 
 **Sequência alternativa:**: Linha 3: O usuário não possui um tíquete para a refeição do dia. O software não destranca a catraca e o usuário não poderá entrar no restaurante universitário.
+**Sequência alternativa:**: Linha 3: O usuário com o CPF informado não está no sistema. O software não destranca a catraca e o usuário não poderá entrar no restaurante universitário.
