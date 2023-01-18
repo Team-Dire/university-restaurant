@@ -1,4 +1,6 @@
-# Caso de uso: Autenticar um usuário.
+# Documento de Casos de Uso
+
+## Caso de uso: Autenticar um usuário
 
 **Ator:** Usuário (iniciador).
 
@@ -11,7 +13,7 @@
 **Referências cruzadas:** R.1.2, R.1.3.
 
 **Sequência típica:**
-| Ator | Sistema | 
+| Ator | Sistema |
 |--------|------|
 |1. Iniciado quando o usuário inicializa o software| |
 |2. O usuário insere o seu CPF e a sua senha|3. O software busca usuário com o mesmo CPF e senha informados.|
@@ -21,8 +23,7 @@
 **Sequência alternativa:**: Linha 3: O CPF informado não foi encontrado. O software deve exibir uma mensagem de erro informando que os usuário não existe e impedir o acesso as outras funcionalidades do software, até que o usuário seja autenticado.
 **Sequência alternativa:**: Linha 3: A senha informada não corresponde a senha associado ao CPF cadastrado. O software deve exibir uma mensagem de erro informando que a senha inserida está incorretos e impedir o acesso as outras funcionalidades do software, até que o usuário seja autenticado.
 
-
-# Caso de uso: Adicionar um novo usuário não administrador.
+## Caso de uso: Adicionar um novo usuário não administrador
 
 **Ator:** Usuário não administrador (iniciador).
 
@@ -35,7 +36,7 @@
 **Referências cruzadas:** R.1.1
 
 **Sequência típica:**:
-| Ator | Sistema | 
+| Ator | Sistema |
 |--------|------|
 |1. Iniciado quando o usuário deseja adicionar uma conta no software.| |
 |2. O usuário insere o seu CPF e senha para cadastro.|3. O software verifica se um usuário com o mesmo CPF existe.|4. O software cria um novo usuário com CPF e senha informados, com o saldo de créditos zerados.|
@@ -44,8 +45,28 @@
 
 **Sequência alternativa:**: Linha 3: O CPF informado já está no sistema. O software deve exibir uma mensagem de erro informando que o CPF já foi cadastrado e deve impedir o acesso as outras funcionalidades do software, até que o usuário seja autenticado ou cadastrado.
 
+## Caso de uso: Inserir créditos a um usuário
 
-# Caso de uso: Inserir nova refeição.
+**Ator:**: Administrador (iniciador), usuário.
+
+**Finalidade:**: Permitir que o administrador insira créditos a um usuário específico.
+
+**Tipo:** Primário, essencial.
+
+**Descrição:**: Um usuário deseja inserir créditos em sua conta. Assim, o usuário deverá pagar um administrador a quantia em dinheiro correspondente ao valor em créditos no qual o usuário deseja inserir em sua conta. Em seguida, o administrador deverá inserir a quantia de créditos correspondente na conta do usuário.
+
+**Referências cruzadas:**: R.3.1, R.3.2
+
+**Sequência típica:**
+| Ator | Sistema |
+|--------|------|
+|1. Iniciado quando um administrador precisa adicionar créditos a um usuário.| |
+|2. O administrador autenticado insere o CPF do usuário e o valor em reais da quantia de créditos no qual deve ser inserida.|3. O sistema busca o usuário pelo CPF informado e adiciona a quantidade de créditos informado no saldo do usuário.|
+| |4. O sistema armazena a data de inserção, quantidade de créditos inserida, usuário beneficiado e o administrador da transação em um arquivo de log.|
+
+**Sequência alternativa:**: Linha 3: O usuário com o CPF informado não está no sistema. O software deve exibir uma mensagem de erro informando que usuário não existe e deve cancelar a inserção de créditos.
+
+## Caso de uso: Inserir nova refeição
 
 **Ator:**: Administrador (iniciador).
 
@@ -58,8 +79,51 @@
 **Referências cruzadas:**: R.2.1, R.2.2
 
 **Sequência típica:**
-| Ator | Sistema | 
+| Ator | Sistema |
 |--------|------|
 |1. Iniciado quando um administrador precisa inserir a refeição de uma determinada data.| |
 |2. O administrador autenticado acessa a função de nova refeição e informa os dados da refeição (data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimentos de base, guarnição, saladas, bebida e sobremesa).|3. O software registra os dados da refeição e torna disponível a venda de tíquetes para a nova refeição.|
 | |4. O software informa ao administrador de que a nova refeição foi criada.|
+
+<<<<<<< HEAD
+
+# Caso de uso: Inserir créditos a um usuário.
+
+**Ator:**: Administrador (iniciador), usuário.
+
+**Finalidade:**: Permitir que o administrador insira créditos a um usuário específico.
+
+**Tipo:** Primário, essencial.
+
+**Descrição:**: Um usuário deseja inserir créditos em sua conta. Assim, o usuário deverá pagar um administrador a quantia em dinheiro correspondente ao valor em créditos no qual o usuário deseja inserir em sua conta. Em seguida, o administrador deverá inserir a quantia de créditos correspondente na conta do usuário.
+
+**Referências cruzadas:**: R.3.1, R.3.2
+
+**Sequência típica:**
+| Ator | Sistema | 
+|--------|------|
+|1. Iniciado quando um administrador precisa adicionar créditos a um usuário.| |
+|2. O administrador autenticado insere o CPF do usuário e o valor em reais da quantia de créditos no qual deve ser inserida.|3. O sistema busca o usuário pelo CPF informado e adiciona a quantidade de créditos informado no saldo do usuário.|
+| |4. O sistema armazena a data de inserção, quantidade de créditos inserida, usuário beneficiado e o administrador da transação em um arquivo de log.|
+
+**Sequência alternativa:**: Linha 3: O usuário com o CPF informado não está no sistema. O software deve exibir uma mensagem de erro informando que usuário não existe e deve cancelar a inserção de créditos.
+=======
+## Caso de uso: Exibir refeições da semana
+
+**Ator:** usuário (iniciador).
+
+**Finalidade:** Permitir que o usuário visualize as refeições da semana.
+
+**Tipo:** Primário, essencial.
+
+**Descrição:** Um usuário deseja visualizar as refeições da semana atual ou semana seguinte. Assim, o usuário irá requisitar ao software a exibição das refeições da semana atual e seguinte.
+
+**Referências cruzadas:**: R.2.3, R.2.4
+
+**Sequência típica:**
+| Ator | Sistema |
+|--------|------|
+|1. Iniciado quando um usuário deseja visualizar as próximas refeições.| |
+|2. O usuário requisita ao software a exibição das próximas refeições.|3. O software exibe o nome de todas as refeições existentes na semana atual e na semana seguinte e também exibe todos os dados correspondente a cada refeição exibida, i.e., data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimentos de base, guarnição, saladas, bebida e sobremesa. |
+|4. O usuário visualiza as próximas refeições. | |
+>>>>>>> origin/sprint-2
