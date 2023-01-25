@@ -18,8 +18,8 @@
 ### Informar refeições
 
 - R2.1 — O software deve ser capaz de permitir o usuário administrador inserir uma refeição que será oferecida pelo restaurante.
-- R2.2 — A refeição deverá conter os seguintes atributos: data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimentos de base, guarnição, saladas, bebida e sobremesa.
-- R2.3 — O software deve ser capaz de permitir que os clientes visualizem o calendário de refeições da semana atual e da seguinte, exibindo o nome das refeições servidas.
+- R2.2 — A refeição deverá conter os seguintes atributos: data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimento de base, guarnição, saladas, bebida e sobremesa.
+- R2.3 — O software deve ser capaz de permitir que os clientes visualizem o calendário de refeições da semana atual e da seguinte, exibindo as refeições que serão servidas.
 - R2.4 — O software deve ser capaz de exibir os todos os atributos de uma refeição.
 
 ### Disponibilizar crédito para o usuário
