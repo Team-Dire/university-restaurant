@@ -1,3 +1,53 @@
+
+# Introdução
+
+## Propósito
+
+Este documento traz os requisitos funcionais e descrições para o desenvolvimento de um software para um  Restaurante Universitário. Além disso, ele possui um glossário para facilitar a compreensão dos termos utilizados.
+
+## Público-alvo
+
+Este documento é destinado aos desenvolvedores do software, que devem utilizá-lo como referência para o desenvolvimento do software.
+
+## Escopo do produto
+
+O software a ser desenvolvido é um gerenciador de refeições para um Restaurante Universitário, com a capacidade de controlar as refeições disponíveis, os clientes e seus créditos, além de interagir com a catraca de entrada do estabelecimento. O sistema contará com administradores e usuários, sendo os administradores responsáveis por inserir as refeições e créditos, enquanto os usuários poderão comprar tíquetes e visualizar o calendário de refeições. É importante destacar que este software não será responsável por gerenciar o estoque de alimentos ou o pagamento dos clientes, e será utilizado apenas como protótipo de um sistema para um restaurante universitário.
+
+# Descrição geral
+
+## Perspectiva do produto
+
+O software visa facilitar a vida dos clientes e administradores do restaurante universitário, permitindo que os clientes comprem tíquetes para refeições a serem servidas, e que os administradores possam inserir refeições e créditos para os clientes. O software também permite que os clientes visualizem o calendário de refeições da semana atual e da seguinte, exibindo as refeições que serão servidas.
+
+## Funcionalidades do prduto
+
+- Manutenção de usuários: armazenar dados sobre os clientes, como CPF, senha, saldo, tipo de usuário, e permitir a autenticação de um usuário por um CPF e senha.
+
+- Informar refeições: permitir o usuário administrador inserir uma refeição que será oferecida pelo restaurante, exibir o calendário de refeições da semana atual e da seguinte, exibindo as refeições que serão servidas, e exibir todos os atributos de uma refeição.
+
+- Disponibilizar crédito para o usuário: permitir que o administrador insira créditos para consumo para um cliente após receber a quantia em dinheiro corrente (moeda física: real).
+
+- Comprar tíquete: permitir que o usuário compre um tíquete para uma refeição a ser servida.
+
+- Entrar no restaurante: permitir que o usuário entre no restaurante universitário utilizando um tíquete.
+
+## Características do usuário
+
+- Administrador: usuário responsável por inserir refeições e créditos para os clientes, geralmente um funcionário do restaurante universitário ou da universidade.
+
+- Usuário: cliente do restaurante universitário, que pode comprar tíquetes para refeições a serem servidas. Pode ser um estudante ou outros funcionários da universidade.
+
+É necessário que o usuário possua acesso ao computador que irá utilizar para acessar o software, e que tenha familiaridade com o uso de um computador.
+
+## Restrições
+
+O software deve ser projetado para executar em um computador com sistema operacional Windows, e deve ser desenvolvido utilizando a linguagem de programação Java.
+Em relação ao hardware, o software deve ser capaz de rodar em um computador com processador Intel Core i3 ou superior, com 4 GB de memória RAM ou superior, e com 1 GB de espaço livre em disco.
+
+## Suposições e dependências
+
+O Java Runtime Enviroment (JRE), na versão 8 ou superior, deve estar instalado no computador que irá executar o software.
+
 # Glossário
 
 - **Tipo de refeição:** café da manhã, almoço, café da tarde e janta.
@@ -8,8 +58,7 @@
 
 # Requisitos funcionais
 
-### Manutenção de usuários
-
+## Manutenção de usuários
 
 - R1.1 — O sistema dever ser capaz de armazenar dados sobre os clientes: CPF, senha, saldo, tipo de usuário.
 - R1.2 — O sistema deve ser capaz de distinguir usuários (clientes) em duas categorias (tipos de usuário): administrador e não-administrador.
