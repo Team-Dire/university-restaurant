@@ -16,15 +16,22 @@ import java.util.ArrayList;
 */
 public class UniversityRestaurant {
     private static ArrayList<Usuario> usuarios = new ArrayList<>();
+    private static ArrayList<Refeicao> refeicoes = new ArrayList<>();
     private static Usuario usuarioAutenticado = null;
 
     public static void addUsuario(Usuario usuario) {
         usuarios.add(usuario);
     }
+    public static void addRefeicao(Refeicao refeicao) {
+        refeicoes.add(refeicao);
+    }
 
     // Getters
     public static ArrayList<Usuario> getUsuarios() {
         return usuarios;
+    }
+    public static ArrayList<Refeicao> getRefeicoes() {
+        return refeicoes;
     }
 
     public static Usuario getUsuarioAutenticado() {

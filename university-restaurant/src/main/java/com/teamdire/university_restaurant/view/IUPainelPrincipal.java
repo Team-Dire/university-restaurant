@@ -43,7 +43,8 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
 
         // Remove todo o painel de usuários
         jMenuBar1.remove(0);
-        // TODO: remover o painel de refeições (tenho que fazer ele antes)
+        // Remover opção de adicionar refeição
+        inserirRefeicaoMenu.remove(0);
     }
 
     /**
@@ -58,7 +59,7 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        inserirRefeicaoMenu = new javax.swing.JMenu();
         inserirRefeicaoMenuItem = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         sairItem = new javax.swing.JMenuItem();
@@ -77,7 +78,7 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Refeições");
+        inserirRefeicaoMenu.setText("Refeições");
 
         inserirRefeicaoMenuItem.setText("Inserir nova refeição");
         inserirRefeicaoMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -85,9 +86,9 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
                 inserirRefeicaoMenuItemActionPerformed(evt);
             }
         });
-        jMenu2.add(inserirRefeicaoMenuItem);
+        inserirRefeicaoMenu.add(inserirRefeicaoMenuItem);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(inserirRefeicaoMenu);
 
         jMenu3.setText("Sistema");
 
@@ -115,6 +116,7 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -136,9 +138,9 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_inserirRefeicaoMenuItemActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu inserirRefeicaoMenu;
     private javax.swing.JMenuItem inserirRefeicaoMenuItem;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
