@@ -59,6 +59,7 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        inserirRefeicaoMenuItem = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         sairItem = new javax.swing.JMenuItem();
 
@@ -77,6 +78,15 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Refeições");
+
+        inserirRefeicaoMenuItem.setText("Inserir nova refeição");
+        inserirRefeicaoMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inserirRefeicaoMenuItemActionPerformed(evt);
+            }
+        });
+        jMenu2.add(inserirRefeicaoMenuItem);
+
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Sistema");
@@ -120,7 +130,13 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_sairItemActionPerformed
 
+    private void inserirRefeicaoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inserirRefeicaoMenuItemActionPerformed
+        IUInserirRefeicao iuInserirRefeicao = new IUInserirRefeicao();
+        iuInserirRefeicao.setVisible(true);
+    }//GEN-LAST:event_inserirRefeicaoMenuItemActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem inserirRefeicaoMenuItem;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
