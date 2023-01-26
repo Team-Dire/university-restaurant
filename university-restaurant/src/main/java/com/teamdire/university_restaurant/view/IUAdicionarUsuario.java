@@ -60,7 +60,6 @@ public class IUAdicionarUsuario extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setAlwaysOnTop(true);
         setResizable(false);
 
         jLabel1.setText("Insira os dados do usuário para criá-lo.");
