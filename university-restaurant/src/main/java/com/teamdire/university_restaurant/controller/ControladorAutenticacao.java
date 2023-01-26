@@ -4,7 +4,15 @@ import com.teamdire.university_restaurant.model.UniversityRestaurant;
 import com.teamdire.university_restaurant.model.Usuario;
 
 public class ControladorAutenticacao {
-    public ControladorAutenticacao() {}
+    public ControladorAutenticacao() {
+        // Caso não haja usuários, cria um "admin admin"
+        // Lembrando que quando isso rodar os dados da persistência
+        // já estarão carregados.
+        if (UniversityRestaurant.getUsuarios().isEmpty()) {
+            Usuario usuario = new Usuario("admin", "admin", true);
+            UniversityRestaurant.addUsuario(usuario);
+        }
+    }
 
     public boolean autenticarUsuario(String cpf, String senha) {
         return UniversityRestaurant.autenticarUsuario(cpf, senha);
@@ -20,8 +28,8 @@ public class ControladorAutenticacao {
         UniversityRestaurant.addUsuario(usuario);
     }
 
-    public Usuario autenticaUsuario(String cpf, String senha) {
+    public Boolean autenticaUsuario(String cpf, String senha) {
         UniversityRestaurant.autenticarUsuario(cpf, senha);
-        return UniversityRestaurant.getUsuarioAutenticado();
+        return UniversityRestaurant.getUsuarioAutenticado() != null;
     }
 }

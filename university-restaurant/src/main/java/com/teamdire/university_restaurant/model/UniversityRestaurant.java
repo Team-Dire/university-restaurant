@@ -19,6 +19,10 @@ public class UniversityRestaurant {
         usuarios.add(usuario);
     }
 
+    public static ArrayList<Usuario> getUsuarios() {
+        return usuarios;
+    }
+
     /**
      * Abordagem um pouco diferente da sugerida pelos diagramas de colaboração
      * do projeto. Separei a recuperação da autenticação.
