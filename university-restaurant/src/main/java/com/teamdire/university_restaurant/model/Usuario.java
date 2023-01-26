@@ -1,6 +1,6 @@
 package com.teamdire.university_restaurant.model;
 
-public class Usuario {
+public class Usuario implements java.io.Serializable {
     private String cpf;
     private String senha;
     private Float saldo;
