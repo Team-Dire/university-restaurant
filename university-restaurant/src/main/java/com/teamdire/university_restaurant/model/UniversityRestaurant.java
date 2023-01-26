@@ -1,5 +1,8 @@
 package com.teamdire.university_restaurant.model;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 /**
@@ -19,8 +22,21 @@ public class UniversityRestaurant {
         usuarios.add(usuario);
     }
 
+    // Getters
     public static ArrayList<Usuario> getUsuarios() {
         return usuarios;
+    }
+
+    public static Usuario getUsuarioAutenticado() {
+        return usuarioAutenticado;
+    }
+
+    // Setters
+    public static void setUsuarios(ArrayList<Usuario> usuarios) {
+        UniversityRestaurant.usuarios = usuarios;
+    }
+    public static void setUsuarioAutenticado(Usuario usuario) {
+        usuarioAutenticado = usuario;
     }
 
     /**
@@ -43,7 +59,8 @@ public class UniversityRestaurant {
         return true;
     }
 
-    public static Usuario getUsuarioAutenticado() {
-        return usuarioAutenticado;
+    public static void salvar() {
+        SerAssist serAssist = new SerAssist(usuarios);
+        serAssist.salvar();
     }
 }

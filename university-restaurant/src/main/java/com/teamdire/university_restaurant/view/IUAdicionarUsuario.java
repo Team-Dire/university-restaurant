@@ -17,6 +17,7 @@
 package com.teamdire.university_restaurant.view;
 
 import com.teamdire.university_restaurant.controller.ControladorAutenticacao;
+import com.teamdire.university_restaurant.model.UniversityRestaurant;
 
 import javax.swing.*;
 
@@ -24,25 +25,20 @@ import javax.swing.*;
  *
  * @author Daniel
  */
-public class IUAutenticaUsuario extends javax.swing.JFrame {
-    private ControladorAutenticacao controladorAutenticacao;
+public class IUAdicionarUsuario extends javax.swing.JFrame {
+
+    private ControladorAutenticacao controlador = new ControladorAutenticacao();
 
     /**
-     * Creates new form IUAutenticaUsuario
+     * Creates new form IUAdicionarUsuario
      */
-    public IUAutenticaUsuario() {
-        // Inicializando controlador
-        controladorAutenticacao = new ControladorAutenticacao();
-
-        // Definindo look
+    public IUAdicionarUsuario() {
         String laf = javax.swing.UIManager.getSystemLookAndFeelClassName();
         try {
             javax.swing.UIManager.setLookAndFeel(laf);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        // Inicializando componentes (função gerada pelo NetBeans)
         initComponents();
     }
 
@@ -57,36 +53,33 @@ public class IUAutenticaUsuario extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jCheckBox1 = new javax.swing.JCheckBox();
         jPasswordField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
         setResizable(false);
-        setSize(new java.awt.Dimension(348, 299));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel1.setText("Bem-vindo ao Restaurante Universitário!");
+        jLabel1.setText("Insira os dados do usuário para criá-lo.");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setText("Por favor, autentique-se.");
+        jLabel2.setText("CPF:");
 
-        jLabel3.setText("CPF:");
+        jLabel3.setText("Senha:");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setText("Senha:");
-
-        jButton1.setLabel("Autenticar-se");
+        jButton1.setText("Adicionar usuário");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox1.setText("Administrador");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
             }
         });
 
@@ -95,63 +88,74 @@ public class IUAutenticaUsuario extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2)
+                    .addComponent(jCheckBox1)
                     .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTextField1)
-                    .addComponent(jLabel4)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPasswordField1))
-                .addGap(60, 60, 60))
+                .addGap(25, 25, 25))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(jCheckBox1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addGap(60, 60, 60))
+                .addGap(25, 25, 25))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // Botão pressionado
-        Boolean sucesso = controladorAutenticacao.autenticaUsuario(jTextField1.getText(), String.valueOf(jPasswordField1.getPassword()));
-        if(!sucesso){
-            JOptionPane.showMessageDialog(null, "CPF ou senha inválidos!");
+        // Verifica se há texto no CPF
+        if (jTextField1.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor, insira um CPF.");
             return;
         }
 
-        IUPainelPrincipal painelPrincipal = new IUPainelPrincipal();
-        painelPrincipal.setVisible(true);
-        this.dispose();
+        if(jPasswordField1.getPassword().length == 0) {
+            JOptionPane.showMessageDialog(null, "Por favor, insira uma senha.");
+            return;
+        }
+
+        String cpf = jTextField1.getText();
+        String senha = String.valueOf(jPasswordField1.getPassword());
+        Boolean sucesso = controlador.adicionarNovoUsuario(cpf, senha, jCheckBox1.isSelected());
+
+        if(sucesso) {
+            JOptionPane.showMessageDialog(null, "Usuário adicionado com sucesso.");
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(null, "Já existe um usuário com este CPF!");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
