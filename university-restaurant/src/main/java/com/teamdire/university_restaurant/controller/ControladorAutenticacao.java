@@ -1,4 +1,7 @@
-package com.teamdire.university_restaurant.model;
+package com.teamdire.university_restaurant.controller;
+
+import com.teamdire.university_restaurant.model.UniversityRestaurant;
+import com.teamdire.university_restaurant.model.Usuario;
 
 public class ControladorAutenticacao {
     public ControladorAutenticacao() {}
