@@ -59,7 +59,7 @@ public class IUAdicionarUsuario extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
         jPasswordField1 = new javax.swing.JPasswordField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         jLabel1.setText("Insira os dados do usuário para criá-lo.");
@@ -119,6 +119,7 @@ public class IUAdicionarUsuario extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
