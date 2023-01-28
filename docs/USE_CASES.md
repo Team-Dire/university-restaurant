@@ -126,7 +126,7 @@
 |1. Iniciado quando um usuário deseja entrar no restaurante.| |
 |2. O usuário insere seu CPF na catraca.|3. O software busca o usuário com o mesmo CPF informado e verifica se o usuário possui um tíquete para a refeição do dia.|
 | |4. O software destrava a catraca.|
-|5. O usuário passa pela catraca. |6. A catraca é travada.|
+| |5. A catraca é travada após o usuário passar pela mesma.|
 
 ## Caso de uso: Exibir refeições da semana
 
