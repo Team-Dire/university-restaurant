@@ -12,11 +12,11 @@ public class ControladorRefeicao {
     }
 
     public boolean inserirNovaRefeicao(byte tipoRefeicao, Calendar dataServentia, int quantidadeTiquetes,
-                                       String nomeRefeicao, ArrayList<String> alimentosBase, String guarnicao,
+                                       String nomeRefeicao, String pratoPrincipal, ArrayList<String> alimentosBase, String guarnicao,
                                        String salada, String bebida, String sobremesa)
     {
         Refeicao refeicao = new Refeicao(tipoRefeicao, dataServentia, quantidadeTiquetes,
-                                         nomeRefeicao, alimentosBase, guarnicao, salada, bebida, sobremesa);
+                                         nomeRefeicao, pratoPrincipal, alimentosBase, guarnicao, salada, bebida, sobremesa);
         UniversityRestaurant.addRefeicao(refeicao);
         return true;
     }

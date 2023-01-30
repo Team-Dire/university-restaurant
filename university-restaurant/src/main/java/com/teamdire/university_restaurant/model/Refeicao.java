@@ -16,7 +16,7 @@ public class Refeicao {
 
     //+ inserirNovaRefeicao(tipoRefeicao : TipoRefeicao, dataServentia : Calendar, quantidadeTiquetes : int, nomeRefeicao : String, alimentosBase : List<String>, guarnicao : String, salada : String, bebida : String, sobremesa : String) : boolean
     public Refeicao(byte tipoRefeicao, Calendar dataServentia, int quantidadeTiquetes,
-                    String nomeRefeicao, ArrayList<String> alimentosBase, String guarnicao,
+                    String nomeRefeicao, String pratoPrincipal, ArrayList<String> alimentosBase, String guarnicao,
                     String salada, String bebida, String sobremesa)
     {
         switch(tipoRefeicao) {
