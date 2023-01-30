@@ -268,6 +268,21 @@ public class IUInserirRefeicao extends javax.swing.JFrame {
         // Date -> Calendar
         Calendar dataServentia = Calendar.getInstance();
         dataServentia.setTime(dataServentiaDateVal);
+        // Se a data de serventia for de hoje, seta a hora para 23:59:59
+        Calendar dataHoje = Calendar.getInstance();
+        if (dataServentia.get(Calendar.YEAR) == dataHoje.get(Calendar.YEAR) &&
+                dataServentia.get(Calendar.MONTH) == dataHoje.get(Calendar.MONTH) &&
+                dataServentia.get(Calendar.DAY_OF_MONTH) == dataHoje.get(Calendar.DAY_OF_MONTH)) {
+            dataServentia.set(Calendar.HOUR_OF_DAY, 23);
+            dataServentia.set(Calendar.MINUTE, 59);
+            dataServentia.set(Calendar.SECOND, 59);
+        }
+
+        // Verifica se a refeição é no passado
+        if (dataServentia.before(dataHoje)) {
+            JOptionPane.showMessageDialog(null, "Não é possível servir refeições no passado!");
+            return;
+        }
 
         // Para cada linha do campo de alimentos base, adiciona no array
         ArrayList<String> alimentosBase = new ArrayList<>(Arrays.asList(alimentosBaseText.split("\n")));
@@ -281,8 +296,6 @@ public class IUInserirRefeicao extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "Erro: essa refeição já exsite.");
         }
-
-        System.out.println(UniversityRestaurant.getRefeicoes().get(0).getNome());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void iuPratoPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iuPratoPrincipalActionPerformed
