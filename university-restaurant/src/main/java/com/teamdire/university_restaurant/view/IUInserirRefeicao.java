@@ -261,7 +261,7 @@ public class IUInserirRefeicao extends javax.swing.JFrame {
         // Se algum dos campos estiver vazio, exibe uma mensagem de erro
         if (nomeRefeicao.equals("") || dataServentiaDateVal == null ||
                 alimentosBaseText.equals("") || salada.equals("") ||
-                guarnicao.equals("") || bebida.equals("") || sobremesa.equals("")) {
+                guarnicao.equals("") || bebida.equals("") || sobremesa.equals("") || pratoPrincipal.equals("")) {
             JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos.");
             return;
         }
