@@ -25,16 +25,14 @@ public class Main {
                     try {
                         Socket socket = server.accept();
                         Scanner scanner = new Scanner(socket.getInputStream());
-                        new Thread(() -> {
-                            while (scanner.hasNextLine()) {
-                                String line = scanner.nextLine();
-                                if (line.equals("LIBERA")) {
-                                    catraca.liberar();
-                                } else if (line.equals("TRAVA")) {
-                                    catraca.travar();
-                                }
+                        while (scanner.hasNextLine()) {
+                            String line = scanner.nextLine();
+                            if (line.equals("LIBERA")) {
+                                catraca.liberar();
+                            } else if (line.equals("TRAVA")) {
+                                catraca.travar();
                             }
-                        }).start();
+                        }
                     } catch (IOException ex) {
                         Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
                     }
