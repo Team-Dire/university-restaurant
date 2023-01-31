@@ -30,4 +30,14 @@ Gsrc/main/java/com/teamdire/university_restaurant/view/IUCalendario.java,2\8\28
 ~
 Nsrc/main/java/com/teamdire/university_restaurant/view/IUAdicionarCreditos.java,8\f\8f731052b5defa12353ef1d4f39a881888e90efb
 |
-Lsrc/main/java/com/teamdire/university_restaurant/view/IUPainelPrincipal.java,7\9\79bf54f719cf2173db4f1f08cb902e6d7ce91fcb
+Lsrc/main/java/com/teamdire/university_restaurant/view/IUInserirRefeicao.java,3\5\3507016e11b40cfd64db4b3a895a578b7560d7e6
+}
+Msrc/main/java/com/teamdire/university_restaurant/view/IUAutenticaUsuario.java,6\b\6b2c91403015006969ad24fc9dd5cd35e34e2f72
+s
+Csrc/main/java/com/teamdire/university_restaurant/model/Tiquete.java,e\5\e57d5815c15990fc7e3f60b66435d6ec8072a80f
+„
+Tsrc/main/java/com/teamdire/university_restaurant/controller/ControladorRefeicao.java,b\2\b29ecb1d8313f626d53129d73b7d083b937e83ab
+j
+:src/main/java/com/teamdire/university_restaurant/Main.java,f\b\fba97f0297ab5aa7a60a55287d6ad99759fa6224
+s
+Csrc/main/java/com/teamdire/university_restaurant/model/Usuario.java,0\f\0f11548e45498fa6d01acc588c329f4897305b2c

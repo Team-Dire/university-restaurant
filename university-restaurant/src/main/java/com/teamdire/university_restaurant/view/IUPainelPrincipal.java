@@ -48,9 +48,7 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
         // Remover opção de adicionar refeição
         inserirRefeicaoMenuItem.setVisible(false);
         // Remove a opção de adicionar créditos
-        // Isso é ok porque esse menu (Vendas) sempre vai ter uma opção,
-        // então não vai ficar feio.
-        addCreditosMenuItem.setVisible(false);
+        vendasMenu.setVisible(false);
     }
 
     /**
