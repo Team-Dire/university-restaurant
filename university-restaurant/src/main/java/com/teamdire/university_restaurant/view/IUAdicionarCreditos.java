@@ -167,6 +167,7 @@ public class IUAdicionarCreditos extends javax.swing.JFrame {
         saldoLabel.setText("R$ " + usuarioRecuperado.getSaldo());
     }//GEN-LAST:event_buscaButtonActionPerformed
 
+    //TODO: FORMATAR DINHEIRO, SE POSSÍVEL ATÉ NO SPINNER, SENÃO SÓ NO LABEL
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         if(cpfBeneficiado == null) {
             JOptionPane.showMessageDialog(null, "Por favor, selecione um usuário.");
