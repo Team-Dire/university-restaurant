@@ -19,11 +19,7 @@ package com.teamdire.university_restaurant.view;
 import com.teamdire.university_restaurant.model.Refeicao;
 
 import javax.swing.table.DefaultTableModel;
-import java.sql.Ref;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalAccessor;
 import java.util.ArrayList;
 
 /**
@@ -31,7 +27,7 @@ import java.util.ArrayList;
  * @author Daniel
  */
 public class IUCalendario extends javax.swing.JFrame {
-    private ArrayList<Refeicao> ponteirosRefeicoes;
+    private final ArrayList<Refeicao> ponteirosRefeicoes;
 
     /**
      * Creates new form IUCalendario
@@ -60,6 +56,8 @@ public class IUCalendario extends javax.swing.JFrame {
             jTable1.setValueAt(dtf.format(refeicoes.get(i).getDataServentia().getTime()), i, 0);
             jTable1.setValueAt(refeicoes.get(i).getNome(), i, 1);
         }
+
+        this.ponteirosRefeicoes = refeicoes;
     }
 
     /**
@@ -101,6 +99,11 @@ public class IUCalendario extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jButton1.setText("Ver mais detalhes sobre a refeição");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -130,6 +133,14 @@ public class IUCalendario extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (jTable1.getSelectedRow() == -1) return;
+        // Verifica se uma linha foi selecionada
+        Refeicao selecionada = this.ponteirosRefeicoes.get(jTable1.getSelectedRow());
+        IUDetalhesRefeicao iu = new IUDetalhesRefeicao(selecionada);
+        iu.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
