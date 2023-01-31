@@ -19,7 +19,7 @@ public class Main {
     private static Catraca catraca = new Catraca();
     public static void escutaCliente() {
         try {
-            final ServerSocket server = new ServerSocket(12345);
+            final ServerSocket server = new ServerSocket(6661);
             new Thread(() -> {
                 while (true) {
                     try {
