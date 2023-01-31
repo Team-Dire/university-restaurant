@@ -9,8 +9,6 @@ x
 Hsrc/main/java/com/teamdire/university_restaurant/model/TipoRefeicao.java,7\2\724d5f3e5f472206697645a518133c7dccf66544
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-}
-Msrc/main/java/com/teamdire/university_restaurant/view/IUAutenticaUsuario.java,6\b\6b2c91403015006969ad24fc9dd5cd35e34e2f72
 I
 university-restaurant.iml,d\e\deb2613a3f33fdb639c9d72911e8de7be6deafcf
 |
@@ -25,5 +23,3 @@ j
 Psrc/main/java/com/teamdire/university_restaurant/model/UniversityRestaurant.java,2\9\29870be5622a8ff3850a4f9ec4d6fa039e2e6a65
 }
 Msrc/main/java/com/teamdire/university_restaurant/view/IUDetalhesRefeicao.java,5\4\5405b37cdcc927a3e6d872615d86bbe5b876f2b7
-|
-Lsrc/main/java/com/teamdire/university_restaurant/view/IUPainelPrincipal.java,7\9\79bf54f719cf2173db4f1f08cb902e6d7ce91fcb

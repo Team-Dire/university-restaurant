@@ -92,4 +92,11 @@ public class ControladorRefeicao {
 
         return null;
     }
+
+    public void destrancarCatraca() {
+        Usuario usuario = UniversityRestaurant.getUsuarioAutenticado();
+        Calendar dataHoraAtual = Calendar.getInstance();
+        // Print current hour
+        System.out.println(dataHoraAtual.get(Calendar.HOUR_OF_DAY));
+    }
 }
