@@ -1,0 +1,23 @@
+
+^
+java:S1192G"IDefine a constant instead of duplicating this literal "Segoe UI" 4 times.(½Áö+
+C
+java:S1604P"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ
+C
+java:S1604]"(Make this anonymous inner class a lambda(©¶”ùÿÿÿÿ
+|
+java:S1450"`Remove the "confirmaCpfButton" field and declare it as a local variable in the relevant methods.(Ï±—ıÿÿÿÿ
+r
+java:S1450‘"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ
+E
+java:S1948"/Make "socketManager" transient or serializable.(èõí€
+Z
+java:S2147"DCombine this catch with the one at line 24, which has the same body.(¨¦Š½
+Z
+java:S2147"DCombine this catch with the one at line 24, which has the same body.(ã€ 
+Y
+java:S2147"DCombine this catch with the one at line 24, which has the same body.(ñÎ¯%
+A
+java:S1172…"*Remove this unused method parameter "evt".(‚À‡ä
+F
+java:S1172‰"*Remove this unused method parameter "evt".(ÊÔË¥şÿÿÿÿ
