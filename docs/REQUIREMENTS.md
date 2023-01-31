@@ -60,42 +60,42 @@ O Java Runtime Enviroment (JRE), na versão 8 ou superior, deve estar instalado 
 
 ## Manutenção de usuários
 
-- R1.1 — O sistema dever ser capaz de armazenar dados sobre os clientes: CPF, senha, saldo, tipo de usuário.
-- R1.2 — O sistema deve ser capaz de distinguir usuários (clientes) em duas categorias (tipos de usuário): administrador e não-administrador.
-- R1.3 — O sistema deve permitir a autenticação de um usuário por um CPF e senha.
+- R1.1 — O sistema dever ser capaz de armazenar dados sobre os clientes: CPF, senha, saldo, tipo de usuário. (E)
+- R1.2 — O sistema deve ser capaz de distinguir usuários (clientes) em duas categorias (tipos de usuário): administrador e não-administrador. (E)
+- R1.3 — O sistema deve permitir a autenticação de um usuário por um CPF e senha. (E)
 
 ### Informar refeições
 
-- R2.1 — O software deve ser capaz de permitir o usuário administrador inserir uma refeição que será oferecida pelo restaurante.
-- R2.2 — A refeição deverá conter os seguintes atributos: data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimento de base, guarnição, saladas, bebida e sobremesa.
-- R2.3 — O software deve ser capaz de permitir que os clientes visualizem o calendário de refeições da semana atual e da seguinte, exibindo as refeições que serão servidas.
-- R2.4 — O software deve ser capaz de exibir os todos os atributos de uma refeição.
+- R2.1 — O software deve ser capaz de permitir o usuário administrador inserir uma refeição que será oferecida pelo restaurante. (E)
+- R2.2 — A refeição deverá conter os seguintes atributos: data de serventia, quantidade de tíquetes totais para compra disponíveis, tipo de refeição, nome da refeição, prato principal, alimento de base, guarnição, saladas, bebida e sobremesa. (E)
+- R2.3 — O software deve ser capaz de permitir que os clientes visualizem o calendário de refeições da semana atual e da seguinte, exibindo as refeições que serão servidas. (E)
+- R2.4 — O software deve ser capaz de exibir os todos os atributos de uma refeição. (E)
 
 ### Disponibilizar crédito para o usuário
 
-- R3.1 — O software deve ser capaz de permitir que o administrador insira créditos para consumo para um cliente após receber a quantia em dinheiro corrente (moeda física: real).
-- R3.2 — O software deve manter registro desta transação, armazenando data, valor, o usuário administrador e o cliente beneficiado.
+- R3.1 — O software deve ser capaz de permitir que o administrador insira créditos para consumo para um cliente após receber a quantia em dinheiro corrente (moeda física: real). (E)
+- R3.2 — O software deve manter registro desta transação, armazenando data, valor, o usuário administrador e o cliente beneficiado. (O)
 
 ### Vender tíquetes
 
-- R4.1 — O software deve ser capaz de permitir que o cliente compre um tíquete por refeição a ser servida.
-- R4.2 — O software deve decrementar o valor em créditos do cliente referente ao tíquete.
-- R4.3 — O software deve garantir que o cliente apenas compre um tíquete caso possua créditos suficientes no momento da aquisição, isto é, no mínimo, o valor do tíquete em crédito.
-- R4.4 — O software deve garantir que o cliente apenas compre uma unidade de tíquete por refeição a ser servida.
-- R4.5 — O software deve garantir que o cliente apenas possa comprar um tíquete para uma refeição caso não possua um tíquete para esta refeição.
-- R4.6 — O software deve garantir que o cliente apenas compre um tíquete caso a quantidade disponível de tíquetes for maior que zero.
-- R4.7 — O software deve garantir que o cliente apenas compre tíquetes até um dia antes da data de serventia.
-- R4.8 — O software deve decrementar a quantidade de tíquetes disponíveis para uma refeição após a compra de um tíquete dela.
-- R4.9 — O software deve definir o valor fixo de R$ 3,00 para cada tíquete.
+- R4.1 — O software deve ser capaz de permitir que o cliente compre um tíquete por refeição a ser servida. (E)
+- R4.2 — O software deve decrementar o valor em créditos do cliente referente ao tíquete. (E)
+- R4.3 — O software deve garantir que o cliente apenas compre um tíquete caso possua créditos suficientes no momento da aquisição, isto é, no mínimo, o valor do tíquete em crédito. (E)
+- R4.4 — O software deve garantir que o cliente apenas compre uma unidade de tíquete por refeição a ser servida. (E)
+- R4.5 — O software deve garantir que o cliente apenas possa comprar um tíquete para uma refeição caso não possua um tíquete para esta refeição. (E)
+- R4.6 — O software deve garantir que o cliente apenas compre um tíquete caso a quantidade disponível de tíquetes for maior que zero. (E)
+- R4.7 — O software deve garantir que o cliente apenas compre tíquetes até um dia antes da data de serventia. (E)
+- R4.8 — O software deve decrementar a quantidade de tíquetes disponíveis para uma refeição após a compra de um tíquete dela. (O)
+- R4.9 — O software deve definir o valor fixo de R$ 3,00 para cada tíquete. (E)
 
 ### Permitir a entrada dos clientes no estabelecimento
 
-- R5.1 — O software deve ser capaz de interagir com a catraca da entrada do estabelecimento do RU, concedendo a passagem para a entrada de um cliente.
-- R5.2 — O software deve ser capaz de conceder a entrada de um cliente após esta pessoa inserir seu CPF na catraca e possuir (no sistema) um tíquete adquirido para a refeição a ser servida.
-- R5.3 — O software deve apenas conceder a entrada no restaurante para clientes com tíquete.
-- R5.4 — O software não deve conceder a entrada no restaurante para clientes sem tíquete.
-- R5.5 — O software deve ser capaz de conceder a entrada de clientes no restaurante apenas na data e período (derivado do tipo de refeição) de serventia.
-- R5.6 — O software deve permitir a entrada de um cliente apenas uma vez para uma refeição servida.
-- R5.7 — O software deve considerar o período de café da manhã das 00h00 às 7h59min59s.
-- R5.8 — O software deve considerar o período do almoço das 08h00 às 15h59min59s.
-- R5.9 — O software deve considerar o período de café da manhã das 16h00 às 23h59min59s.
+- R5.1 — O software deve ser capaz de interagir com a catraca da entrada do estabelecimento do RU, concedendo a passagem para a entrada de um cliente. (E)
+- R5.2 — O software deve ser capaz de conceder a entrada de um cliente após esta pessoa inserir seu CPF na catraca e possuir (no sistema) um tíquete adquirido para a refeição a ser servida. (E)
+- R5.3 — O software deve apenas conceder a entrada no restaurante para clientes com tíquete. (E)
+- R5.4 — O software não deve conceder a entrada no restaurante para clientes sem tíquete. (E)
+- R5.5 — O software deve ser capaz de conceder a entrada de clientes no restaurante apenas na data e período (derivado do tipo de refeição) de serventia. (E)
+- R5.6 — O software deve permitir a entrada de um cliente apenas uma vez para uma refeição servida. (E)
+- R5.7 — O software deve considerar o período de café da manhã das 00h00 às 7h59min59s. (O)
+- R5.8 — O software deve considerar o período do almoço das 08h00 às 15h59min59s. (O)
+- R5.9 — O software deve considerar o período de café da manhã das 16h00 às 23h59min59s. (O)
