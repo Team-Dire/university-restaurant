@@ -40,4 +40,20 @@ public class ControladorRefeicao {
     public Float buscarSaldo(String cpf) {
         return Objects.requireNonNull(UniversityRestaurant.recuperarUsuario(cpf)).getSaldo();
     }
+
+    public ArrayList<Refeicao> getRefeicoesSemanaAtual() {
+        ArrayList<Refeicao> refeicoes = UniversityRestaurant.getRefeicoes();
+        Calendar dataAtual = Calendar.getInstance();
+        // Filtra as da semana atual
+        refeicoes.removeIf(refeicao -> refeicao.getDataServentia().get(Calendar.WEEK_OF_YEAR) != dataAtual.get(Calendar.WEEK_OF_YEAR));
+        return refeicoes;
+    }
+
+    public ArrayList<Refeicao> getRefeicoesSemanaSeguinte() {
+        ArrayList<Refeicao> refeicoes = UniversityRestaurant.getRefeicoes();
+        Calendar dataAtual = Calendar.getInstance();
+        // Filtra as da semana atual
+        refeicoes.removeIf(refeicao -> refeicao.getDataServentia().get(Calendar.WEEK_OF_YEAR) != dataAtual.get(Calendar.WEEK_OF_YEAR) + 1);
+        return refeicoes;
+    }
 }

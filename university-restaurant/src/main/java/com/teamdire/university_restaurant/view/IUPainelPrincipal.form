@@ -19,7 +19,7 @@
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="inserirRefeicaoMenu">
+        <Menu class="javax.swing.JMenu" name="refeicaoMenu">
           <Properties>
             <Property name="text" type="java.lang.String" value="Refei&#xe7;&#xf5;es"/>
           </Properties>
@@ -31,6 +31,19 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inserirRefeicaoMenuItemActionPerformed"/>
               </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="calendarioAtualMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ver calend&#xe1;rio da semana atual"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calendarioAtualMenuItemActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="calendarioSegMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ver calend&#xe1;rio da semana seguinte"/>
+              </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
