@@ -17,6 +17,7 @@
 package com.teamdire.university_restaurant.view;
 
 import com.teamdire.university_restaurant.controller.ControladorAutenticacao;
+import com.teamdire.university_restaurant.controller.ControladorRefeicao;
 
 import javax.swing.*;
 
@@ -31,7 +32,6 @@ public class IUAutenticaUsuario extends javax.swing.JFrame {
      * Creates new form IUAutenticaUsuario
      */
     public IUAutenticaUsuario() {
-        // Inicializando controlador
         controladorAutenticacao = new ControladorAutenticacao();
 
         // Definindo look

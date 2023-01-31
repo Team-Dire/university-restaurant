@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class UniversityRestaurant {
     private static ArrayList<Usuario> usuarios = new ArrayList<>();
     private static ArrayList<Refeicao> refeicoes = new ArrayList<>();
+    private static ArrayList<LogCreditos> logsCreditos = new ArrayList<>();
     private static Usuario usuarioAutenticado = null;
 
     public static void addUsuario(Usuario usuario) {
@@ -24,6 +25,9 @@ public class UniversityRestaurant {
     }
     public static void addRefeicao(Refeicao refeicao) {
         refeicoes.add(refeicao);
+    }
+    public static void addLogCreditos(LogCreditos log) {
+        logsCreditos.add(log);
     }
 
     // Getters
@@ -33,6 +37,9 @@ public class UniversityRestaurant {
     public static ArrayList<Refeicao> getRefeicoes() {
         return refeicoes;
     }
+    public static ArrayList<LogCreditos> getLogsCreditos() {
+        return logsCreditos;
+    }
 
     public static Usuario getUsuarioAutenticado() {
         return usuarioAutenticado;
@@ -41,6 +48,12 @@ public class UniversityRestaurant {
     // Setters
     public static void setUsuarios(ArrayList<Usuario> usuarios) {
         UniversityRestaurant.usuarios = usuarios;
+    }
+    public static void setRefeicoes(ArrayList<Refeicao> refeicoes) {
+        UniversityRestaurant.refeicoes = refeicoes;
+    }
+    public static void setLogsCreditos(ArrayList<LogCreditos> logsCreditos) {
+        UniversityRestaurant.logsCreditos = logsCreditos;
     }
     public static void setUsuarioAutenticado(Usuario usuario) {
         usuarioAutenticado = usuario;
@@ -67,7 +80,7 @@ public class UniversityRestaurant {
     }
 
     public static void salvar() {
-        SerAssist serAssist = new SerAssist(usuarios);
+        SerAssist serAssist = new SerAssist(usuarios, refeicoes, logsCreditos);
         serAssist.salvar();
     }
 }

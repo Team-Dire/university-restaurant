@@ -36,4 +36,12 @@ public class ControladorAutenticacao {
     public void deslogarUsuario() {
         UniversityRestaurant.setUsuarioAutenticado(null);
     }
+
+    public Usuario buscarUsuario(String cpf) {
+        return UniversityRestaurant.recuperarUsuario(cpf);
+    }
+
+    public Usuario getUsuarioAutenticado() {
+        return UniversityRestaurant.getUsuarioAutenticado();
+    }
 }

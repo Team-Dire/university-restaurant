@@ -3,7 +3,7 @@ package com.teamdire.university_restaurant.model;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Refeicao {
+public class Refeicao implements java.io.Serializable {
     private String nome;
     private Calendar dataServentia;
     private TipoRefeicao tipoRefeicao;
@@ -13,6 +13,7 @@ public class Refeicao {
     private String salada;
     private String bebida;
     private String sobremesa;
+    private String pratoPrincipal;
 
     //+ inserirNovaRefeicao(tipoRefeicao : TipoRefeicao, dataServentia : Calendar, quantidadeTiquetes : int, nomeRefeicao : String, alimentosBase : List<String>, guarnicao : String, salada : String, bebida : String, sobremesa : String) : boolean
     public Refeicao(byte tipoRefeicao, Calendar dataServentia, int quantidadeTiquetes,
@@ -41,6 +42,7 @@ public class Refeicao {
         this.salada = salada;
         this.bebida = bebida;
         this.sobremesa = sobremesa;
+        this.pratoPrincipal = pratoPrincipal;
     }
 
     // Getters
@@ -78,5 +80,13 @@ public class Refeicao {
 
     public String getSobremesa() {
         return sobremesa;
+    }
+
+    public String getPratoPrincipal() {
+        return pratoPrincipal;
+    }
+
+    public void descontaTiquete() {
+        this.quantidadeTiquetes--;
     }
 }

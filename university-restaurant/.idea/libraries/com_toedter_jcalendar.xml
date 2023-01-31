@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.toedter:jcalendar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dependencies/jcalendar-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -7,6 +7,7 @@
       <Point value="[0, 0]"/>
     </Property>
     <Property name="name" type="java.lang.String" value="Inserir refei&#xe7;&#xe3;o" noResource="true"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
