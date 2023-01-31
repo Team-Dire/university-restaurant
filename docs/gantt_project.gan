@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2023-01-19" view-index="0" gantt-divider-location="707" resource-divider-location="300" version="3.2.3230" locale="es_ES">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2022-11-22" view-index="0" gantt-divider-location="707" resource-divider-location="300" version="3.2.3230" locale="es_ES">
     <description/>
-    <view zooming-state="default:1" id="gantt-chart">
+    <view zooming-state="default:3" id="gantt-chart">
         <field id="tpd3" name="Nombre" width="392" order="0"/>
-        <field id="tpd4" name="Fecha de inicio" width="169" order="2"/>
         <field id="tpd5" name="Fecha de fin" width="145" order="1"/>
+        <field id="tpd4" name="Fecha de inicio" width="169" order="2"/>
         <option id="filter.completedTasks" value="false"/>
         <option id="color.recent">
             <![CDATA[#ccff00 #ff0000 #ffcc00]]>
@@ -37,13 +37,13 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Representação e adição das refeições na aplicação" color="#ff0000" meeting="false" start="2022-11-11" duration="55" complete="70" thirdDate="2022-12-13" thirdDate-constraint="0" expand="true"/>
-        <task id="1" name="Login e Representação dos usuários na aplicação" color="#ff0000" meeting="false" start="2022-11-11" duration="55" complete="70" thirdDate="2022-11-09" thirdDate-constraint="0" priority="2" expand="true"/>
-        <task id="2" name="Visualização do calendário das refeições" color="#ff0000" meeting="false" start="2022-12-05" duration="40" complete="20" thirdDate="2022-11-09" thirdDate-constraint="0" expand="true"/>
-        <task id="3" name="Inserção de créditos no sistema e registro desta transação #5" color="#ff0000" meeting="false" start="2022-12-05" duration="40" complete="50" thirdDate="2022-10-31" thirdDate-constraint="0" expand="true"/>
-        <task id="4" name="Venda de tíquete de refeição" color="#ccff00" meeting="false" start="2022-12-13" duration="35" complete="50" thirdDate="2022-10-31" thirdDate-constraint="0" expand="true"/>
-        <task id="5" name="Criação da catraca virtual" color="#ccff00" meeting="false" start="2022-12-13" duration="35" complete="50" thirdDate="2022-10-31" thirdDate-constraint="0" expand="true"/>
-        <task id="6" name="Permitir a entrada dos clientes no estabelecimento" color="#8cb6ce" meeting="false" start="2023-01-04" duration="19" complete="35" thirdDate="2023-01-04" thirdDate-constraint="1" priority="4" expand="true"/>
+        <task id="0" name="Representação e adição das refeições na aplicação" color="#ff0000" meeting="false" start="2022-11-11" duration="57" complete="100" thirdDate="2022-12-13" thirdDate-constraint="0" expand="true"/>
+        <task id="1" name="Login e Representação dos usuários na aplicação" color="#ff0000" meeting="false" start="2022-11-11" duration="58" complete="100" thirdDate="2022-11-09" thirdDate-constraint="0" priority="2" expand="true"/>
+        <task id="2" name="Visualização do calendário das refeições" color="#ff0000" meeting="false" start="2022-12-05" duration="42" complete="100" thirdDate="2022-11-09" thirdDate-constraint="0" expand="true"/>
+        <task id="3" name="Inserção de créditos no sistema e registro desta transação #5" color="#ff0000" meeting="false" start="2022-12-05" duration="42" complete="100" thirdDate="2022-10-31" thirdDate-constraint="0" expand="true"/>
+        <task id="4" name="Venda de tíquete de refeição" color="#ccff00" meeting="false" start="2022-12-13" duration="36" complete="100" thirdDate="2022-10-31" thirdDate-constraint="0" expand="true"/>
+        <task id="5" name="Criação da catraca virtual" color="#ccff00" meeting="false" start="2022-12-13" duration="36" complete="100" thirdDate="2022-10-31" thirdDate-constraint="0" expand="true"/>
+        <task id="6" name="Permitir a entrada dos clientes no estabelecimento" color="#8cb6ce" meeting="false" start="2023-01-04" duration="20" complete="100" thirdDate="2023-01-04" thirdDate-constraint="1" priority="4" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
@@ -75,6 +75,15 @@
             <previous-task id="4" start="2023-01-04" duration="12" meeting="false" super="false"/>
             <previous-task id="5" start="2022-12-23" duration="12" meeting="false" super="false"/>
             <previous-task id="6" start="2023-01-20" duration="4" meeting="false" super="false"/>
+        </previous-tasks>
+        <previous-tasks name="Final">
+            <previous-task id="0" start="2022-11-11" duration="55" meeting="false" super="false"/>
+            <previous-task id="1" start="2022-11-11" duration="55" meeting="false" super="false"/>
+            <previous-task id="2" start="2022-12-05" duration="40" meeting="false" super="false"/>
+            <previous-task id="3" start="2022-12-05" duration="40" meeting="false" super="false"/>
+            <previous-task id="4" start="2022-12-13" duration="35" meeting="false" super="false"/>
+            <previous-task id="5" start="2022-12-13" duration="35" meeting="false" super="false"/>
+            <previous-task id="6" start="2023-01-04" duration="19" meeting="false" super="false"/>
         </previous-tasks>
     </previous>
     <roles roleset-name="Default"/>
