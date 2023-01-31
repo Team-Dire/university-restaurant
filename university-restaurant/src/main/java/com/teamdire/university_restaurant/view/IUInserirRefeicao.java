@@ -84,6 +84,7 @@ public class IUInserirRefeicao extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setLocation(new java.awt.Point(0, 0));
         setName("Inserir refeição"); // NOI18N
+        setResizable(false);
 
         jLabel1.setText("Tipo de refeição:");
 

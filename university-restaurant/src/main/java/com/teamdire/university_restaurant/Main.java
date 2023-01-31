@@ -19,6 +19,10 @@ public class Main {
                 stream.close();
                 // Carrega os usuários
                 UniversityRestaurant.setUsuarios(serAssist.getUsuarios());
+                // Carrega as refeições
+                UniversityRestaurant.setRefeicoes(serAssist.getRefeicoes());
+                // Carrega os logs de créditos
+                UniversityRestaurant.setLogsCreditos(serAssist.getLogsCreditos());
             } catch (Exception e) {
                 e.printStackTrace();
             }

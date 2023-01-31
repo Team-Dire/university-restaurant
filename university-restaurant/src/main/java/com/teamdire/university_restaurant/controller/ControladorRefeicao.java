@@ -1,11 +1,10 @@
 package com.teamdire.university_restaurant.controller;
 
-import com.teamdire.university_restaurant.model.Refeicao;
-import com.teamdire.university_restaurant.model.TipoRefeicao;
-import com.teamdire.university_restaurant.model.UniversityRestaurant;
+import com.teamdire.university_restaurant.model.*;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Objects;
 
 public class ControladorRefeicao {
     public ControladorRefeicao() {
@@ -18,6 +17,27 @@ public class ControladorRefeicao {
         Refeicao refeicao = new Refeicao(tipoRefeicao, dataServentia, quantidadeTiquetes,
                                          nomeRefeicao, pratoPrincipal, alimentosBase, guarnicao, salada, bebida, sobremesa);
         UniversityRestaurant.addRefeicao(refeicao);
+        // Persistindo os dados
+        UniversityRestaurant.salvar();
         return true;
+    }
+
+    public void adicionarCreditos(String cpfBeneficiado, Float valorInserido) {
+        // Preparando os dados
+        Usuario usuario = UniversityRestaurant.recuperarUsuario(cpfBeneficiado);
+        Usuario usuarioResponsavel = UniversityRestaurant.getUsuarioAutenticado();
+        Calendar dataInsercao = Calendar.getInstance();
+        // Adicionando os crédtios
+        assert usuario != null;
+        usuario.setSaldo(usuario.getSaldo() + valorInserido);
+        // Adicionando a transação no log
+        LogCreditos log = new LogCreditos(usuario, usuarioResponsavel, valorInserido, dataInsercao);
+        UniversityRestaurant.addLogCreditos(log);
+        // Persistindo os dados
+        UniversityRestaurant.salvar();
+    }
+
+    public Float buscarSaldo(String cpf) {
+        return Objects.requireNonNull(UniversityRestaurant.recuperarUsuario(cpf)).getSaldo();
     }
 }

@@ -17,6 +17,7 @@
 package com.teamdire.university_restaurant.view;
 
 import com.teamdire.university_restaurant.controller.ControladorAutenticacao;
+import com.teamdire.university_restaurant.model.UniversityRestaurant;
 
 /**
  *
@@ -45,6 +46,10 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
         jMenuBar1.remove(0);
         // Remover opção de adicionar refeição
         inserirRefeicaoMenu.remove(0);
+        // Remove a opção de adicionar créditos
+        // Isso é ok porque esse menu (Vendas) sempre vai ter uma opção,
+        // então não vai ficar feio.
+        addCreditosMenuItem.setVisible(false);
     }
 
     /**
@@ -61,10 +66,13 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         inserirRefeicaoMenu = new javax.swing.JMenu();
         inserirRefeicaoMenuItem = new javax.swing.JMenuItem();
+        vendasMenu = new javax.swing.JMenu();
+        addCreditosMenuItem = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         sairItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jMenu1.setText("Usuários");
 
@@ -89,6 +97,18 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
         inserirRefeicaoMenu.add(inserirRefeicaoMenuItem);
 
         jMenuBar1.add(inserirRefeicaoMenu);
+
+        vendasMenu.setText("Vendas");
+
+        addCreditosMenuItem.setText("Adicionar créditos");
+        addCreditosMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addCreditosMenuItemActionPerformed(evt);
+            }
+        });
+        vendasMenu.add(addCreditosMenuItem);
+
+        jMenuBar1.add(vendasMenu);
 
         jMenu3.setText("Sistema");
 
@@ -137,7 +157,13 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
         iuInserirRefeicao.setVisible(true);
     }//GEN-LAST:event_inserirRefeicaoMenuItemActionPerformed
 
+    private void addCreditosMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCreditosMenuItemActionPerformed
+        IUAdicionarCreditos iuAdicionarCreditos = new IUAdicionarCreditos();
+        iuAdicionarCreditos.setVisible(true);
+    }//GEN-LAST:event_addCreditosMenuItemActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem addCreditosMenuItem;
     private javax.swing.JMenu inserirRefeicaoMenu;
     private javax.swing.JMenuItem inserirRefeicaoMenuItem;
     private javax.swing.JMenu jMenu1;
@@ -145,5 +171,6 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem sairItem;
+    private javax.swing.JMenu vendasMenu;
     // End of variables declaration//GEN-END:variables
 }

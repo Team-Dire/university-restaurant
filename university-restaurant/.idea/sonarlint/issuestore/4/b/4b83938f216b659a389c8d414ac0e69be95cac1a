@@ -1,0 +1,21 @@
+
+F
+java:S5411"(Use a primitive boolean expression here.(îê‘ğ8¡Œ¦öŞ0
+n
+java:S1450š"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶
+y
+java:S1450œ"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ8–Ÿ¦öŞ0
+y
+java:S1450"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ8–Ÿ¦öŞ0
+y
+java:S1450"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ8–Ÿ¦öŞ0
+C
+java:S1948"-Make "controlador" transient or serializable.(²ªË£
+@
+java:S1172}"*Remove this unused method parameter "evt".(‚À‡ä
+M
+java:S1172•"*Remove this unused method parameter "evt".(íÜßóûÿÿÿÿ8 Ÿ¦öŞ0
+U
+java:S1135–"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8 Ÿ¦öŞ0
+|
+java:S1128"ZRemove this unused import 'com.teamdire.university_restaurant.model.UniversityRestaurant'.(ÀöÂËüÿÿÿÿ8Óµ¦öŞ0

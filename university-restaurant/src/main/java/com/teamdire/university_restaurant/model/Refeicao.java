@@ -3,7 +3,7 @@ package com.teamdire.university_restaurant.model;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Refeicao {
+public class Refeicao implements java.io.Serializable {
     private String nome;
     private Calendar dataServentia;
     private TipoRefeicao tipoRefeicao;
