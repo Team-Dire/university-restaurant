@@ -43,7 +43,8 @@ public class SocketManager {
 
     public void validaCpf(String cpf) {
         try {
-            socket.getOutputStream().write(cpf.getBytes());
+            String enviar = cpf + "\n";
+            socket.getOutputStream().write(enviar.getBytes());
         } catch (IOException ex) {
             Logger.getLogger(SocketManager.class.getName()).log(Level.SEVERE, null, ex);
         }
