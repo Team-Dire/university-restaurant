@@ -17,6 +17,7 @@
 package com.teamdire.university_restaurant.view;
 
 import com.teamdire.university_restaurant.controller.ControladorAutenticacao;
+import com.teamdire.university_restaurant.controller.ControladorRefeicao;
 import com.teamdire.university_restaurant.model.UniversityRestaurant;
 
 /**
@@ -107,6 +108,11 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
         refeicaoMenu.add(calendarioAtualMenuItem);
 
         calendarioSegMenuItem.setText("Ver calendário da semana seguinte");
+        calendarioSegMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calendarioSegMenuItemActionPerformed(evt);
+            }
+        });
         refeicaoMenu.add(calendarioSegMenuItem);
 
         jMenuBar1.add(refeicaoMenu);
@@ -176,8 +182,16 @@ public class IUPainelPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_addCreditosMenuItemActionPerformed
 
     private void calendarioAtualMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calendarioAtualMenuItemActionPerformed
-        // TODO add your handling code here:
+        ControladorRefeicao controladorRefeicao = new ControladorRefeicao();
+        IUCalendario iuCalendario = new IUCalendario("atual", controladorRefeicao.getRefeicoesSemanaAtual());
+        iuCalendario.setVisible(true);
     }//GEN-LAST:event_calendarioAtualMenuItemActionPerformed
+
+    private void calendarioSegMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calendarioSegMenuItemActionPerformed
+        ControladorRefeicao controladorRefeicao = new ControladorRefeicao();
+        IUCalendario iuCalendario = new IUCalendario("seguinte", controladorRefeicao.getRefeicoesSemanaSeguinte());
+        iuCalendario.setVisible(true);
+    }//GEN-LAST:event_calendarioSegMenuItemActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem addCreditosMenuItem;

@@ -5,6 +5,7 @@ import com.teamdire.university_restaurant.model.*;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class ControladorRefeicao {
     public ControladorRefeicao() {
@@ -44,16 +45,18 @@ public class ControladorRefeicao {
     public ArrayList<Refeicao> getRefeicoesSemanaAtual() {
         ArrayList<Refeicao> refeicoes = UniversityRestaurant.getRefeicoes();
         Calendar dataAtual = Calendar.getInstance();
-        // Filtra as da semana atual
-        refeicoes.removeIf(refeicao -> refeicao.getDataServentia().get(Calendar.WEEK_OF_YEAR) != dataAtual.get(Calendar.WEEK_OF_YEAR));
-        return refeicoes;
+        // Create a new array, filtering out the refeicoes that are not from the current week
+        return refeicoes.stream()
+                .filter(refeicao -> refeicao.getDataServentia().get(Calendar.WEEK_OF_YEAR) == dataAtual.get(Calendar.WEEK_OF_YEAR))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     public ArrayList<Refeicao> getRefeicoesSemanaSeguinte() {
         ArrayList<Refeicao> refeicoes = UniversityRestaurant.getRefeicoes();
         Calendar dataAtual = Calendar.getInstance();
-        // Filtra as da semana atual
-        refeicoes.removeIf(refeicao -> refeicao.getDataServentia().get(Calendar.WEEK_OF_YEAR) != dataAtual.get(Calendar.WEEK_OF_YEAR) + 1);
-        return refeicoes;
+        // Create a new array, filtering out the refeicoes that are not from the next week
+        return refeicoes.stream()
+                .filter(refeicao -> refeicao.getDataServentia().get(Calendar.WEEK_OF_YEAR) == dataAtual.get(Calendar.WEEK_OF_YEAR) + 1)
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 }

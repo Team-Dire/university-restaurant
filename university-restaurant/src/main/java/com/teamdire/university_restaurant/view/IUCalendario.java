@@ -18,7 +18,12 @@ package com.teamdire.university_restaurant.view;
 
 import com.teamdire.university_restaurant.model.Refeicao;
 
+import javax.swing.table.DefaultTableModel;
 import java.sql.Ref;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 import java.util.ArrayList;
 
 /**
@@ -26,11 +31,12 @@ import java.util.ArrayList;
  * @author Daniel
  */
 public class IUCalendario extends javax.swing.JFrame {
+    private ArrayList<Refeicao> ponteirosRefeicoes;
 
     /**
      * Creates new form IUCalendario
      */
-    public IUCalendario(String tipo, ArrayList<Refeicao> refeicoes) {
+    public IUCalendario(String semana, ArrayList<Refeicao> refeicoes) {
         String laf = javax.swing.UIManager.getSystemLookAndFeelClassName();
         try {
             javax.swing.UIManager.setLookAndFeel(laf);
@@ -39,6 +45,21 @@ public class IUCalendario extends javax.swing.JFrame {
         }
 
         initComponents();
+
+        // Seta a label com um texto personalizado
+        jLabel1.setText("Refeições da semana " + semana);
+
+        // Converte para uma DefaultTableModel para que possamos trabalhar
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        // Seta o número de linhas
+        model.setRowCount(refeicoes.size());
+        // Criando um formatador de data
+        SimpleDateFormat dtf = new SimpleDateFormat("dd/MM/yyyy");
+        // Preenche a tabela com os dados
+        for (int i = 0; i < refeicoes.size(); i++) {
+            jTable1.setValueAt(dtf.format(refeicoes.get(i).getDataServentia().getTime()), i, 0);
+            jTable1.setValueAt(refeicoes.get(i).getNome(), i, 1);
+        }
     }
 
     /**
@@ -55,15 +76,15 @@ public class IUCalendario extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel1.setText("Refeições");
+        jLabel1.setText("Refeições da semana");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "Data de serventia", "Nome da refeição"
@@ -107,6 +128,7 @@ public class IUCalendario extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
