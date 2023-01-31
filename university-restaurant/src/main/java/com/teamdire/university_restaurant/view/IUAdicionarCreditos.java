@@ -83,7 +83,7 @@ public class IUAdicionarCreditos extends javax.swing.JFrame {
         jLabel5.setText("R$");
 
         creditosSpin.setModel(new javax.swing.SpinnerNumberModel(0.0f, 0.0f, null, 1.0f));
-        creditosSpin.setValue(10.00);
+        creditosSpin.setValue(10.00f);
 
         addButton.setText("Adicionar créditos");
         addButton.addActionListener(new java.awt.event.ActionListener() {
@@ -174,8 +174,7 @@ public class IUAdicionarCreditos extends javax.swing.JFrame {
         }
 
         ControladorRefeicao controladorRefeicao = new ControladorRefeicao();
-        Double creditosVal = (Double) creditosSpin.getValue();
-        Float creditos = creditosVal.floatValue();
+        Float creditos = (Float) creditosSpin.getValue();
         controladorRefeicao.adicionarCreditos(cpfBeneficiado, creditos);
         JOptionPane.showMessageDialog(null,
                 "Créditos adicionados com sucesso. O saldo do usuário agora é de R$ " +

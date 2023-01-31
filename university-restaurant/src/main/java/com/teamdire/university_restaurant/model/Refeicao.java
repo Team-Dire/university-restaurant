@@ -85,4 +85,8 @@ public class Refeicao implements java.io.Serializable {
     public String getPratoPrincipal() {
         return pratoPrincipal;
     }
+
+    public void descontaTiquete() {
+        this.quantidadeTiquetes--;
+    }
 }

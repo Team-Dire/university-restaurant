@@ -16,8 +16,12 @@
  */
 package com.teamdire.university_restaurant.view;
 
+import com.teamdire.university_restaurant.controller.ControladorAutenticacao;
+import com.teamdire.university_restaurant.controller.ControladorRefeicao;
 import com.teamdire.university_restaurant.model.Refeicao;
+import com.teamdire.university_restaurant.model.Usuario;
 
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -73,6 +77,7 @@ public class IUCalendario extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
+        comprarTiqueteButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -98,10 +103,17 @@ public class IUCalendario extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        jButton1.setText("Ver mais detalhes sobre a refeição");
+        jButton1.setText("Ver mais detalhes");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
+            }
+        });
+
+        comprarTiqueteButton.setText("Comprar tiquete");
+        comprarTiqueteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comprarTiqueteButtonActionPerformed(evt);
             }
         });
 
@@ -112,7 +124,10 @@ public class IUCalendario extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(comprarTiqueteButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel1)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -126,7 +141,9 @@ public class IUCalendario extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(jButton1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(comprarTiqueteButton))
                 .addGap(25, 25, 25))
         );
 
@@ -135,14 +152,29 @@ public class IUCalendario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (jTable1.getSelectedRow() == -1) return;
         // Verifica se uma linha foi selecionada
+        if (jTable1.getSelectedRow() == -1) return;
         Refeicao selecionada = this.ponteirosRefeicoes.get(jTable1.getSelectedRow());
         IUDetalhesRefeicao iu = new IUDetalhesRefeicao(selecionada);
         iu.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void comprarTiqueteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comprarTiqueteButtonActionPerformed
+        if (jTable1.getSelectedRow() == -1) return;
+        ControladorRefeicao controlador = new ControladorRefeicao();
+        ControladorAutenticacao controladorAutenticacao = new ControladorAutenticacao();
+        Usuario usuario = controladorAutenticacao.getUsuarioAutenticado();
+        Refeicao selecionada = this.ponteirosRefeicoes.get(jTable1.getSelectedRow());
+
+        String response = controlador.adicionarTiquete(usuario, selecionada);
+        if(response == null){
+            response = "Tiquete adquirido com sucesso!";
+        }
+        JOptionPane.showMessageDialog(null, response);
+    }//GEN-LAST:event_comprarTiqueteButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton comprarTiqueteButton;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
