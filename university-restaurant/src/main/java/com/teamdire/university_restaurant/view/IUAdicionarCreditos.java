@@ -174,7 +174,9 @@ public class IUAdicionarCreditos extends javax.swing.JFrame {
         }
 
         ControladorRefeicao controladorRefeicao = new ControladorRefeicao();
-        controladorRefeicao.adicionarCreditos(cpfBeneficiado, (Float) creditosSpin.getValue());
+        Double creditosVal = (Double) creditosSpin.getValue();
+        Float creditos = creditosVal.floatValue();
+        controladorRefeicao.adicionarCreditos(cpfBeneficiado, creditos);
         JOptionPane.showMessageDialog(null,
                 "Créditos adicionados com sucesso. O saldo do usuário agora é de R$ " +
                         controladorRefeicao.buscarSaldo(cpfBeneficiado) + "."
