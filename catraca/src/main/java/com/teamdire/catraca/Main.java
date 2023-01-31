@@ -4,17 +4,49 @@
  */
 package com.teamdire.catraca;
 
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Daniel
  */
 public class Main {
+    private static Catraca catraca = new Catraca();
+    public static void escutaCliente() {
+        try {
+            final ServerSocket server = new ServerSocket(12345);
+            new Thread(() -> {
+                while (true) {
+                    try {
+                        Socket socket = server.accept();
+                        Scanner scanner = new Scanner(socket.getInputStream());
+                        new Thread(() -> {
+                            while (scanner.hasNextLine()) {
+                                String line = scanner.nextLine();
+                                if (line.equals("LIBERA")) {
+                                    catraca.liberar();
+                                } else if (line.equals("TRAVA")) {
+                                    catraca.travar();
+                                }
+                            }
+                        }).start();
+                    } catch (IOException ex) {
+                        Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            }).start();
+        } catch (IOException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        Catraca catraca = new Catraca();
+        escutaCliente();
         catraca.setVisible(true);
     }
     
