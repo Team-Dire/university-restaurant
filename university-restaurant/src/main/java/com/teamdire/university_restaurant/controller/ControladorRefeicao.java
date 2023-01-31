@@ -97,6 +97,6 @@ public class ControladorRefeicao {
         Usuario usuario = UniversityRestaurant.getUsuarioAutenticado();
         Calendar dataHoraAtual = Calendar.getInstance();
         // Print current hour
-        System.out.println(dataHoraAtual.get(Calendar.HOUR_OF_DAY));
+        //System.out.println(dataHoraAtual.get(Calendar.HOUR_OF_DAY));
     }
 }
