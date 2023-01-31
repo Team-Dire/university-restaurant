@@ -86,6 +86,7 @@ O Java Runtime Enviroment (JRE), na versão 8 ou superior, deve estar instalado 
 - R4.6 — O software deve garantir que o cliente apenas compre um tíquete caso a quantidade disponível de tíquetes for maior que zero.
 - R4.7 — O software deve garantir que o cliente apenas compre tíquetes até um dia antes da data de serventia.
 - R4.8 — O software deve decrementar a quantidade de tíquetes disponíveis para uma refeição após a compra de um tíquete dela.
+- R4.9 — O software deve definir o valor fixo de R$ 3,00 para cada tíquete.
 
 ### Permitir a entrada dos clientes no estabelecimento
 
@@ -95,3 +96,6 @@ O Java Runtime Enviroment (JRE), na versão 8 ou superior, deve estar instalado 
 - R5.4 — O software não deve conceder a entrada no restaurante para clientes sem tíquete.
 - R5.5 — O software deve ser capaz de conceder a entrada de clientes no restaurante apenas na data e período (derivado do tipo de refeição) de serventia.
 - R5.6 — O software deve permitir a entrada de um cliente apenas uma vez para uma refeição servida.
+- R5.7 — O software deve considerar o período de café da manhã das 00h00 às 7h59min59s.
+- R5.8 — O software deve considerar o período do almoço das 08h00 às 15h59min59s.
+- R5.9 — O software deve considerar o período de café da manhã das 16h00 às 23h59min59s.
