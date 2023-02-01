@@ -93,10 +93,39 @@ public class ControladorRefeicao {
         return null;
     }
 
-    public void destrancarCatraca() {
-        Usuario usuario = UniversityRestaurant.getUsuarioAutenticado();
-        Calendar dataHoraAtual = Calendar.getInstance();
-        // Print current hour
-        //System.out.println(dataHoraAtual.get(Calendar.HOUR_OF_DAY));
+    public Boolean destrancarCatraca(String cpf) {
+        Usuario usuario = UniversityRestaurant.recuperarUsuario(cpf);
+        if (usuario == null) return false;
+
+        // Pega as refeições
+        ArrayList<Refeicao> refeicoes = UniversityRestaurant.getRefeicoes();
+        TipoRefeicao tipo;
+        // Decide o tipo de refeição pelo horário
+        Calendar hoje = Calendar.getInstance();
+        int horaAtual = hoje.get(Calendar.HOUR_OF_DAY);
+        if(horaAtual < 8) {
+            tipo = TipoRefeicao.CAFE_DA_MANHA;
+        } else if(horaAtual < 16) {
+            tipo = TipoRefeicao.ALMOCO;
+        } else {
+            tipo = TipoRefeicao.JANTA;
+        }
+        // Filtra as refeições que serão servidas hoje, do tipo correto
+        ArrayList<Refeicao> refeicoesHoje = refeicoes.stream()
+                .filter(refeicao -> refeicao.getDataServentia().get(Calendar.DAY_OF_YEAR) == hoje.get(Calendar.DAY_OF_YEAR))
+                .filter(refeicao -> refeicao.getTipoRefeicao() == tipo)
+                .collect(Collectors.toCollection(ArrayList::new));
+        // Se não houver refeições, não destranca a catraca
+        if (refeicoesHoje.isEmpty()) return false;
+        // Se o usuário não tiver tiquete para a refeição, não destranca a catraca
+        if (!usuario.getTiquetes().containsKey(refeicoesHoje.get(0))) return false;
+        // Se o tiquete estiver usado, não destranca a catraca
+        if (usuario.getTicketByRefeicao(refeicoesHoje.get(0)).getFoiUtilizado()) return false;
+        // Se ele tiver, usa o tiquete
+        usuario.getTicketByRefeicao(refeicoesHoje.get(0)).usar();
+        // Persistindo os dados
+        UniversityRestaurant.salvar();
+        // E, por fim, libera a catraca
+        return true;
     }
 }

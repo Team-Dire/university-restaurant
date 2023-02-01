@@ -1,5 +1,6 @@
 package com.teamdire.university_restaurant;
 
+import com.teamdire.university_restaurant.controller.ControladorRefeicao;
 import com.teamdire.university_restaurant.model.SerAssist;
 import com.teamdire.university_restaurant.view.IUAutenticaUsuario;
 import com.teamdire.university_restaurant.model.UniversityRestaurant;
@@ -42,6 +43,13 @@ public class Main {
                     while (scanner.hasNextLine()) {
                         String line = scanner.nextLine();
                         // Essa linha é pra ser um CPF
+                        // Tenta desbloquear a catraca
+                        ControladorRefeicao controladorRefeicao = new ControladorRefeicao();
+                        Boolean sucesso = controladorRefeicao.destrancarCatraca(line);
+                        if(!sucesso) continue;
+                        // Se destrancou, envia a mensagem de destrancar
+                        String enviar = "LIBERA" + "\n";
+                        socket.getOutputStream().write(enviar.getBytes());
                     }
                 } catch (Exception e) {
                     e.printStackTrace();

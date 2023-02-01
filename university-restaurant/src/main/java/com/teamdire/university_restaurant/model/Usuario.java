@@ -8,7 +8,7 @@ public class Usuario implements java.io.Serializable {
     private Float saldo;
     private Boolean isAdmin;
 
-    private HashMap<Refeicao, Tiquete> tiquetes;
+    private final HashMap<Refeicao, Tiquete> tiquetes;
 
     // Construtor
     public Usuario(String cpf, String senha, Boolean isAdmin) {
@@ -64,5 +64,10 @@ public class Usuario implements java.io.Serializable {
         this.tiquetes.put(refeicao, tiquete);
         // TODO: fix usando preço fixo de R$ 3,00
         this.saldo -= 3.0f;
+    }
+
+    public Tiquete getTicketByRefeicao(Refeicao refeicao) {
+        Tiquete tiquete = this.tiquetes.get(refeicao);
+        return tiquete;
     }
 }

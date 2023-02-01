@@ -32,10 +32,6 @@ public class IUAutenticaUsuario extends javax.swing.JFrame {
      * Creates new form IUAutenticaUsuario
      */
     public IUAutenticaUsuario() {
-        // TODO: remove this
-        ControladorRefeicao controladorRefeicao = new ControladorRefeicao();
-        controladorRefeicao.destrancarCatraca();
-        // Inicializando controlador
         controladorAutenticacao = new ControladorAutenticacao();
 
         // Definindo look

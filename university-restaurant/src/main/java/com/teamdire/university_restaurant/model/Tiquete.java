@@ -6,4 +6,12 @@ public class Tiquete implements java.io.Serializable {
     public Tiquete() {
         this.foiUtilizado = false;
     }
+
+    public Boolean getFoiUtilizado() {
+        return foiUtilizado;
+    }
+
+    public void usar() {
+        this.foiUtilizado = true;
+    }
 }
